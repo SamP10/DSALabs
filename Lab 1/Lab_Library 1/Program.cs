@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Lab_Library_1
 {
@@ -10,7 +11,10 @@ namespace Lab_Library_1
     {
         static void Main(string[] args)
         {
-            Book[] books = new Book[3];
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new GUI());
+            /*Book[] books = new Book[3];
 
             books[0] = new Book("Moby Dick");
 
@@ -18,17 +22,24 @@ namespace Lab_Library_1
 
             books[0].Author.Age = 53;
 
+            books[0].ISBN = 123456789;
+
             books[1] = new Book("The Creeping");
 
             books[1].Author = new Person("Luke D");
 
             books[1].Author.Age = 43;
 
+            books[1].ISBN = 123456781;
+
             books[2] = new Book("To Kill A Mockingbird");
 
             books[2].Author = new Person("Harper Lee");
 
             books[2].Author.Age = 90;
+
+            books[2].ISBN = 123456782;
+
 
             for (int i = 0; i<3; i++)
             {
@@ -48,7 +59,7 @@ namespace Lab_Library_1
             {
                 Console.WriteLine("Title of book in position 1 is the same as the title of " + books[0].Title + " book in position 0");
             }
-            Console.ReadKey();
+            Console.ReadKey();*/
         }
     }
 }

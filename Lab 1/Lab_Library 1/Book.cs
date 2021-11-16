@@ -10,16 +10,18 @@ namespace Lab_Library_1
     {
         private string title;
         private Person author;
+        private int isbn;
 
         public Book(string title)
         {
             this.title = title;
         }
 
-        public Book(string title, Person author)
+        public Book(string title, Person author, int isbn)
         {
             this.title = title;
             this.author = author;
+            this.isbn = isbn;
         }
 
         public Person Author
@@ -32,10 +34,15 @@ namespace Lab_Library_1
             get { return title; }
             set { title = value; }
         }
+        public int ISBN
+        {
+            get { return isbn; }
+            set { isbn = value; }
+        }
 
         public string GetSummary()
         {
-            string summary = "Title: " + title + "  Author: " + author.Name+"  Age: " + author.Age;
+            string summary = "Title: " + title + "  Author: " + author.Name+"  Age: " + author.Age + "  ISBN: "+isbn;
             return summary;
         }
     }

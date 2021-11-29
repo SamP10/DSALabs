@@ -1,0 +1,7 @@
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_4_exercises\Task_A\Task_A\bin\Debug\Task_A.exe.config
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_4_exercises\Task_A\Task_A\bin\Debug\Task_A.exe
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_4_exercises\Task_A\Task_A\bin\Debug\Task_A.pdb
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_4_exercises\Task_A\Task_A\obj\Debug\Task_A.csproj.AssemblyReference.cache
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_4_exercises\Task_A\Task_A\obj\Debug\Task_A.csproj.CoreCompileInputs.cache
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_4_exercises\Task_A\Task_A\obj\Debug\Task_A.exe
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_4_exercises\Task_A\Task_A\obj\Debug\Task_A.pdb

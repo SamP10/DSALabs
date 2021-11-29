@@ -28,16 +28,19 @@ namespace Task_B
         {
             detailsDisplay.Text = "";
             string emp = Convert.ToString(listBox1.SelectedItem);
-            Employee E = employeeDict[emp];
-            if (E.Availability == false)
+            if (Convert.ToString(listBox1.SelectedItem) != "")
             {
-                detailsDisplay.Text = "Name: " + E.Name + " ID: " + E.ID + " Available? No";
+                Employee E = employeeDict[emp];
+
+                if (E.Availability == false)
+                {
+                    detailsDisplay.Text = "Name: " + E.Name + " ID: " + E.ID + " Available? No";
+                }
+                if (E.Availability == true)
+                {
+                    detailsDisplay.Text = "Name: " + E.Name + " ID: " + E.ID + " Available? No";
+                }
             }
-            if(E.Availability == true)
-            {
-                detailsDisplay.Text = "Name: " + E.Name + " ID: " + E.ID + " Available? No";
-            }
-            
             listBox1.Items.Clear();
             Dictionary<string, Employee>.ValueCollection id = employeeDict.Values;
             foreach (Employee i in id)

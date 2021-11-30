@@ -27,9 +27,18 @@ namespace Task_B
 
             BinTree mytree = new BinTree(root);
 
-            string s = " ";
-            mytree.Largest(ref s);
-            Console.WriteLine(s);
+            string s = "";
+            string x = "";
+            mytree.Largest(ref s, ref x);
+            Console.WriteLine("Longest lexicographically family member: " + x);
+            Console.WriteLine("Enter person one: ");
+            string p1 = Console.ReadLine();
+
+            Console.WriteLine("Enter person two: ");
+            string p2 = Console.ReadLine();
+
+            string path = "";
+            mytree.Ancestor(p1, p2, ref path);
 
             Console.ReadKey();
         }

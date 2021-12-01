@@ -52,6 +52,8 @@ namespace Task_B
                 string pR = "";
                 leftTree(tree.Left, person1, person2, ref pL);
                 rightTree(tree.Right, person1, person2, ref pR);
+                Console.WriteLine("Left Tree: "+pL);
+                Console.WriteLine("Right Tree: " + pR);
             }
            
         }
@@ -66,9 +68,20 @@ namespace Task_B
             if(tree != null) 
             { 
                  pL += tree.Data + ", ";
-                 leftTree(tree.Left, person1, person2, ref pL);
-                 leftTree(tree.Right, person1, person2, ref pL);
-                 Console.WriteLine(pL);
+                if (pL.Contains(person1) == true && pL.Contains(person2) == true)
+                {
+                    Console.WriteLine("in left hand tree");
+                }
+                else if (pL.Contains(person1) == true || pL.Contains(person2) == true)
+                {
+                    Console.WriteLine("Common ancestor is "+ root.Data);
+                }
+                else
+                {
+                    leftTree(tree.Left, person1, person2, ref pL);
+                    leftTree(tree.Right, person1, person2, ref pL);
+                }
+                
             }
         }
 
@@ -77,10 +90,22 @@ namespace Task_B
             if(tree != null) 
             { 
                 pR += tree.Data + ", ";
-                rightTree(tree.Left, person1, person2, ref pR);
-                rightTree(tree.Right, person1, person2, ref pR);
-                Console.WriteLine(pR);
+                if (pR.Contains(person1) == true && pR.Contains(person2) == true) 
+                {
+                    Console.WriteLine("in right hand tree");
+                }
+                else if(pR.Contains(person1) == true || pR.Contains(person2) == true)
+                {
+                    Console.WriteLine("Common ancestor is " + root.Data);
+                }
+                else
+                {
+                    rightTree(tree.Left, person1, person2, ref pR);
+                    rightTree(tree.Right, person1, person2, ref pR);
+                }
+
             }
+            
         }
     }
 }

@@ -18,12 +18,20 @@ namespace Task_B
             root.Right.Left = new Node("JM");
             root.Right.Right = new Node("CM");
             root.Left.Left.Left = new Node("SCP");
-            root.Left.Left.Right = new Node("AJP");
-            root.Left.Right.Left = new Node("GP");
-            root.Left.Right.Right = new Node("JP");
-            root.Right.Right.Left = new Node("CM");
-            root.Left.Left.Right.Left = new Node("LMP");
-            root.Left.Left.Right.Left = new Node("IMP");
+            root.Right.Right.Right = new Node("PM");
+
+            /* Tree Diagram
+             * -----------------------
+             *               BP
+             *             /    \
+             *           GP      LP
+             *          /  \    /  \
+             *      PMHP   JP  JM   CM
+             *       /                \
+             *     SCP                PM
+             *      
+             * 
+             */
 
             BinTree mytree = new BinTree(root);
 
@@ -39,7 +47,6 @@ namespace Task_B
 
             string path = "";
             mytree.Ancestor(p1, p2, ref path);
-
             Console.ReadKey();
         }
     }

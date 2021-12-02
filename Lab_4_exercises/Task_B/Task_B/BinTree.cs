@@ -50,10 +50,34 @@ namespace Task_B
             {
                 string pL = "";
                 string pR = "";
+                person1=person1.ToUpper();
+                person2=person2.ToUpper();
                 leftTree(tree.Left, person1, person2, ref pL);
                 rightTree(tree.Right, person1, person2, ref pR);
-                Console.WriteLine("Left Tree: "+pL);
-                Console.WriteLine("Right Tree: " + pR);
+                if (pL.Contains(person1) && pL.Contains(person2)) 
+                { 
+                    string lca="";
+                    findLCA(tree.Left, person1, person2, ref lca);
+                    Console.WriteLine("The lowest common ancestor is: "+lca);
+                }
+                else if(pR.Contains(person1) && pR.Contains(person2))
+                {
+                    string lca="";
+                    findLCA(tree.Right, person1, person2, ref lca);
+                    Console.WriteLine("The lowest common ancestor is: "+lca);
+                }
+                else if(pR.Contains(person1) && pL.Contains(person2))
+                {
+                    Console.WriteLine("The lowest common ancestor is: "+root.Data);
+                }
+                else if(pR.Contains(person2) && pL.Contains(person1))
+                {
+                    Console.WriteLine("The lowest common ancestor is: "+root.Data);
+                }
+                else
+                {
+                    Console.WriteLine("Person not found within tree exiting!");
+                }
             }
            
         }
@@ -67,21 +91,9 @@ namespace Task_B
         {
             if(tree != null) 
             { 
-                 pL += tree.Data + ", ";
-                if (pL.Contains(person1) == true && pL.Contains(person2) == true)
-                {
-                    Console.WriteLine("in left hand tree");
-                }
-                else if (pL.Contains(person1) == true || pL.Contains(person2) == true)
-                {
-                    Console.WriteLine("Common ancestor is "+ root.Data);
-                }
-                else
-                {
-                    leftTree(tree.Left, person1, person2, ref pL);
-                    leftTree(tree.Right, person1, person2, ref pL);
-                }
-                
+                pL += tree.Data + ", ";
+                leftTree(tree.Left, person1, person2, ref pL);
+                leftTree(tree.Right, person1, person2, ref pL);
             }
         }
 
@@ -90,22 +102,41 @@ namespace Task_B
             if(tree != null) 
             { 
                 pR += tree.Data + ", ";
-                if (pR.Contains(person1) == true && pR.Contains(person2) == true) 
-                {
-                    Console.WriteLine("in right hand tree");
-                }
-                else if(pR.Contains(person1) == true || pR.Contains(person2) == true)
-                {
-                    Console.WriteLine("Common ancestor is " + root.Data);
-                }
-                else
-                {
-                    rightTree(tree.Left, person1, person2, ref pR);
-                    rightTree(tree.Right, person1, person2, ref pR);
-                }
-
+                
+                rightTree(tree.Left, person1, person2, ref pR);
+                rightTree(tree.Right, person1, person2, ref pR);
             }
             
+        }
+
+        private void findLCA(Node tree, string x, string y, ref string lca)
+        {
+            if(tree != null)
+            {
+                
+                if(tree.Left != null && tree.Right != null)
+                { 
+                    if (tree.Left.Data == x || tree.Right.Data == y)
+                    {
+                        string parent = tree.Data;
+                        lca += parent+" ";
+                        
+                    }
+                    else if (tree.Left.Data == y || tree.Right.Data == x)
+                    {
+                        string parent = tree.Data;
+                        lca += parent+" ";
+                      
+                    }
+                    else
+                    {
+                        findLCA(tree.Left, x, y, ref lca);
+                        findLCA(tree.Right, x, y, ref lca);
+                    }
+                }
+                
+                
+            }
         }
     }
 }

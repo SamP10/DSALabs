@@ -9,8 +9,8 @@ namespace Task_B
     class Graph
     {
         private LinkedList<GraphNode> nodes;
-        LinkedList<string> stack;
-        LinkedList<string> path;
+
+        
         public Graph()
         {
             nodes = new LinkedList<GraphNode>();
@@ -23,13 +23,20 @@ namespace Task_B
 
         public GraphNode GetNodeByID(string id)
         {
-            foreach (GraphNode n in nodes)
+            if(id != null)
             {
-                if (id == n.ID)
-                    return n;
-            }
+                foreach (GraphNode n in nodes)
+                {
+                    if (id == n.ID)
+                    {
+                        return n;
+                    }
+                        
+                }
 
-            return null;
+                return null;
+            }return null;
+            
         }
 
         public void AddEdge(string from, string to)
@@ -74,13 +81,53 @@ namespace Task_B
 
         }
 
-        public void DFS(string n, ref List<string> path)
+        public string DirectF(string n)
         {
+            string path = "";
             GraphNode n1 = GetNodeByID(n);
             LinkedList<string> adjList = n1.GetAdjList();
+            
             foreach(string adj in adjList)
             {
-                path.Add(adj);
+                path = path +" "+  adj;
+            }
+            return path;
+        }
+
+        public void DFS(string n, ref LinkedList<string> stack, ref LinkedList<string> visited)
+        {
+            if (GetNodeByID(n) != null)
+            {
+                GraphNode n1 = GetNodeByID(n);
+                LinkedList<string> adjList = n1.GetAdjList();
+
+                if (adjList.Count == 0)
+                {
+                    if (stack.Count != 0)
+                    {
+                        if (visited.Contains(n1.ID)==false) 
+                        {
+                            visited.AddLast(n1.ID); 
+                        }
+
+                        string nextN = stack.Last();
+                        stack.Remove(nextN);
+                        DFS(nextN, ref stack, ref visited);
+                    }
+                }
+                else if (adjList.Count != 0)
+                {
+                    foreach (string adj in adjList)
+                    {
+                        stack.AddLast(adj);
+                    }
+                    if (visited.Contains(n1.ID) == false)
+                    {
+                        visited.AddLast(n1.ID);
+                    }
+                    string nextN = stack.Last();
+                    DFS(nextN, ref stack, ref visited);
+                }
             }
             
         }

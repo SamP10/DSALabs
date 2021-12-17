@@ -13,8 +13,8 @@ namespace Task_B
     public partial class Form1 : Form
     {
         Graph myGraph = new Graph();
-        List<string> path;
-        LinkedList<string> stack;
+        LinkedList<string> visited = new LinkedList<string>();
+        LinkedList<string> stack = new LinkedList<string>();
         public Form1()
         {
             InitializeComponent();
@@ -222,17 +222,72 @@ namespace Task_B
 
         private void Search_Click(object sender, EventArgs e)
         {
-            string f = Convert.ToString(fromBox.SelectedItem);
-            
-            //path.AddFirst(f);
-            //stack.AddFirst(f);
-            myGraph.DFS(f, ref path);
-            foreach( string p in path)
+            if (fromBox.SelectedItem != null)
             {
-                dfsBox.Items.Add(p);
+                dfsBox.Items.Clear();
+                visited = new LinkedList<string>();
+                string f = Convert.ToString(fromBox.SelectedItem);
+                if (directSel.Checked == true)
+                {
+
+                    string dFlights = myGraph.DirectF(f);
+                    if (dFlights.Length != 0)
+                    {
+                        string path = "Direct flights: " + dFlights;
+                        dfsBox.Items.Add(path);
+                    }
+                    else
+                    {
+                        dfsBox.Items.Add("No direct flights available");
+                    }
+                }
+                else if (conSel.Checked == true)
+                {
+                    string dFlights = myGraph.DirectF(f);
+
+                    myGraph.DFS(f, ref stack, ref visited);
+
+                    string[] p = dFlights.Split(' ');
+                    foreach (string v in p)
+                    {
+                        string x = Convert.ToString(v);
+                        if (x != " ")
+                        {
+                            visited.Remove(x);
+                        }
+
+                    }
+                    visited.Remove(f);
+                    string option = "Connected flights:";
+                    dfsBox.Items.Add(option);
+                    foreach (string v in visited)
+                    {
+                        dfsBox.Items.Add(v);
+                    }
+
+                }
+                else if (bothSel.Checked == true)
+                {
+                    myGraph.DFS(f, ref stack, ref visited);
+                    visited.Remove(f);
+                    string option = "Both connected and direct flights:";
+                    dfsBox.Items.Add(option);
+                    foreach (string v in visited)
+                    {
+                        dfsBox.Items.Add(v);
+                    }
+                }
+                else
+                {
+                    errorM4.Text = "Please select an option.";
+                    errorM4.ForeColor = Color.Red;
+                }
             }
-            
-            
+            else
+            {
+                errorM4.Text = "Please select a airport";
+                errorM4.ForeColor = Color.Red;
+            }
         }
     }
 }

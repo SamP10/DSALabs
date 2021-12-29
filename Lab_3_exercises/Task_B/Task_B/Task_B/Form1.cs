@@ -88,6 +88,8 @@ namespace Task_B
                     foreach (Employee i in ids)
                     {
                         listBox1.Items.Add(i.ID);
+                        errorLabel.Text = "Employee Added";
+                        errorLabel.ForeColor = Color.Green;
                     }
                 }
             }
@@ -112,14 +114,10 @@ namespace Task_B
                     {
                         listBox1.Items.Add(i.ID);
                     }
+                    errorLabel.Text = "Employee Added";
+                    errorLabel.ForeColor = Color.Green;
                 }
-            }
-            if(availNo.Checked == false && availYes.Checked == false)
-            {
-                errorLabel.Text = "Please check the availability";
-                errorLabel.ForeColor = Color.Red;
-            }
-            
+            }     
             
         }
 

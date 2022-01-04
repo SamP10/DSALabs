@@ -1,0 +1,30 @@
+C:\Users\21309892\source\repos\Task B\Task B\bin\Debug\Task B.exe.config
+C:\Users\21309892\source\repos\Task B\Task B\bin\Debug\Task B.exe
+C:\Users\21309892\source\repos\Task B\Task B\bin\Debug\Task B.pdb
+C:\Users\21309892\source\repos\Task B\Task B\obj\Debug\Task B.csprojAssemblyReference.cache
+C:\Users\21309892\source\repos\Task B\Task B\obj\Debug\Task_B.Form1.resources
+C:\Users\21309892\source\repos\Task B\Task B\obj\Debug\Task_B.Properties.Resources.resources
+C:\Users\21309892\source\repos\Task B\Task B\obj\Debug\Task B.csproj.GenerateResource.cache
+C:\Users\21309892\source\repos\Task B\Task B\obj\Debug\Task B.csproj.CoreCompileInputs.cache
+C:\Users\21309892\source\repos\Task B\Task B\obj\Debug\Task B.exe
+C:\Users\21309892\source\repos\Task B\Task B\obj\Debug\Task B.pdb
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_2_exercises\Task B\Task B\obj\Debug\Task B.csproj.AssemblyReference.cache
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_2_exercises\Task B\Task B\obj\Debug\Task_B.Form1.resources
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_2_exercises\Task B\Task B\obj\Debug\Task_B.Properties.Resources.resources
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_2_exercises\Task B\Task B\obj\Debug\Task B.csproj.GenerateResource.cache
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_2_exercises\Task B\Task B\obj\Debug\Task B.csproj.CoreCompileInputs.cache
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_2_exercises\Task B\Task B\obj\Debug\Task B.exe
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_2_exercises\Task B\Task B\obj\Debug\Task B.pdb
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_2_exercises\Task B\Task B\bin\Debug\Task B.exe.config
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_2_exercises\Task B\Task B\bin\Debug\Task B.exe
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_2_exercises\Task B\Task B\bin\Debug\Task B.pdb
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_2_assessed_exercises\Task B\Task B\bin\Debug\Task B.exe.config
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_2_assessed_exercises\Task B\Task B\bin\Debug\Task B.exe
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_2_assessed_exercises\Task B\Task B\bin\Debug\Task B.pdb
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_2_assessed_exercises\Task B\Task B\obj\Debug\Task B.csproj.AssemblyReference.cache
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_2_assessed_exercises\Task B\Task B\obj\Debug\Task_B.Form1.resources
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_2_assessed_exercises\Task B\Task B\obj\Debug\Task_B.Properties.Resources.resources
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_2_assessed_exercises\Task B\Task B\obj\Debug\Task B.csproj.GenerateResource.cache
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_2_assessed_exercises\Task B\Task B\obj\Debug\Task B.csproj.CoreCompileInputs.cache
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_2_assessed_exercises\Task B\Task B\obj\Debug\Task B.exe
+C:\Users\Sam\Desktop\Masters\DSALabs\Lab_2_assessed_exercises\Task B\Task B\obj\Debug\Task B.pdb
